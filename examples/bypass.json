@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "title": "故障：出口忘记检查密码",
+  "facts": ["code", "escaped"],
+  "initial": [],
+  "goals": ["escaped"],
+  "must_solve": ["decode"],
+  "actions": [
+    {"id": "decode", "produces": ["code"]},
+    {"id": "open_exit", "produces": ["escaped"]}
+  ]
+}

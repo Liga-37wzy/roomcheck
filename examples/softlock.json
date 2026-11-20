@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "title": "故障：唯一电池被可选收音机用掉",
+  "facts": ["battery", "music", "escaped"],
+  "initial": ["battery"],
+  "goals": ["escaped"],
+  "actions": [
+    {"id": "play_radio", "label": "一次性用掉电池播放音乐", "consumes": ["battery"], "produces": ["music"]},
+    {"id": "power_exit", "label": "给出口供电", "consumes": ["battery"], "produces": ["escaped"]}
+  ]
+}

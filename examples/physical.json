@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "title": "实体密室：档案室（原创演示）",
+  "facts": ["lamp", "cabinet_key", "code", "map", "escaped"],
+  "initial": ["lamp"],
+  "goals": ["escaped"],
+  "must_solve": ["read_note", "open_cabinet", "open_exit"],
+  "actions": [
+    {"id": "read_note", "label": "用灯读隐藏字迹", "requires_all": ["lamp"], "produces": ["code"]},
+    {"id": "find_key", "label": "从书架找到钥匙", "produces": ["cabinet_key"]},
+    {"id": "open_cabinet", "label": "打开档案柜", "requires_all": ["cabinet_key"], "produces": ["map"]},
+    {"id": "open_exit", "label": "结合地图与密码打开出口", "requires_all": ["code", "map"], "produces": ["escaped"]}
+  ]
+}

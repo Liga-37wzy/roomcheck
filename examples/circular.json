@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "title": "故障：钥匙锁在自己的柜子里",
+  "facts": ["key", "cabinet_open", "escaped"],
+  "initial": [],
+  "goals": ["escaped"],
+  "actions": [
+    {"id": "get_key", "requires_all": ["cabinet_open"], "produces": ["key"]},
+    {"id": "open_cabinet", "requires_all": ["key"], "produces": ["cabinet_open"]},
+    {"id": "escape", "requires_all": ["cabinet_open"], "produces": ["escaped"]}
+  ]
+}

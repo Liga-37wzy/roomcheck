@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "title": "线上解谜：信号站（原创演示）",
+  "facts": ["password", "override", "logged_in", "escaped"],
+  "initial": [],
+  "goals": ["escaped"],
+  "must_solve": ["login", "send_signal"],
+  "actions": [
+    {"id": "decode", "label": "解开便签密码", "produces": ["password"]},
+    {"id": "repair", "label": "修好备用认证电路", "produces": ["override"]},
+    {"id": "login", "label": "任选一种认证方式", "requires_any": ["password", "override"], "produces": ["logged_in"]},
+    {"id": "send_signal", "label": "发送求救信号", "requires_all": ["logged_in"], "produces": ["escaped"]}
+  ]
+}
